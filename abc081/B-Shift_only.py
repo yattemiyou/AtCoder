@@ -2,19 +2,16 @@ N = int(input())
 A = list(map(int, input().split()))
 
 count = 0
-is_exist_odd = False
 
 while True:
     for i in range(N):
-        if A[i] % 2 != 0:
-            is_exist_odd = True
+        if A[i] % 2 == 1:
             break
 
         A[i] = A[i] / 2
-
-    if is_exist_odd:
-        break
-
-    count = count + 1
+    else:
+        count = count + 1
+        continue
+    break
 
 print(count)
