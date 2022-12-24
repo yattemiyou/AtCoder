@@ -3,8 +3,12 @@ T = input()
 
 
 def get_answer():
+    global S
+
     for i in range(len(S)):
-        if S[len(S)-i:] + S[0:len(S)-i] == T:
+        S = S[-1] + S[0:-1]
+
+        if S == T:
             return True
 
     return False
