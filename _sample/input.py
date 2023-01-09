@@ -9,6 +9,10 @@ N, M = map(int, input().split())
 print(N, M)
 
 #
+S = [input() for _ in range(N)]
+print(S)
+
+#
 N = int(input())
 
 graph = defaultdict(lambda: list())
