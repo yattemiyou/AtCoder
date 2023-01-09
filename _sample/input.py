@@ -17,6 +17,11 @@ print(S)
 
 #
 N = int(input())
+A = [[] for _ in range(N)]
+print(A)
+
+#
+N = int(input())
 A = [list(map(int, input().split())) for _ in range(N)]
 print(A)
 
