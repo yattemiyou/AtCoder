@@ -9,6 +9,9 @@ N, M = map(int, input().split())
 print(N, M)
 
 #
+A = list(map(int, input().split()))
+
+#
 S = [input() for _ in range(N)]
 print(S)
 
