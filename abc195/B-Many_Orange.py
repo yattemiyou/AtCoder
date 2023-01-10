@@ -4,6 +4,7 @@ W *= 1000
 # A*N <= W*1000 <= B*Nの場合に成立
 
 # 切り上げ
+# https://daeudaeu.com/kurisuke_kiriage_shisyagonyu/#i-4
 min = int((W + B - 1) / B)
 # 切り捨て
 max = int(W / A)
