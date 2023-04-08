@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 def is_prime(n):
     if n == 1:
         return False
@@ -33,7 +36,15 @@ def factorize_prime(n):
     return answer
 
 
-def get_factor(n):
+def count_factors(n):
+    answer = 1
+    for c in Counter(factorize_prime(n)):
+        answer *= c[1]+1
+
+    return answer
+
+
+def get_factors(n):
     answer = []
 
     for i in range(1, n):
