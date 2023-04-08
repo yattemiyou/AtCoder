@@ -32,3 +32,21 @@ def factorize_prime(n):
 
     return answer
 
+
+def get_factor(n):
+    answer = []
+
+    for i in range(1, n):
+        if i * i > n:
+            break
+
+        if n % i != 0:
+            continue
+
+        answer.append(i)
+
+        if i != n//i:
+            answer.append(n//i)
+
+    return sorted(answer)
+
