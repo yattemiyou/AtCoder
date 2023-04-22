@@ -1,6 +1,19 @@
 from collections import Counter
 
 
+def get_prime_table(n):
+    prime_table = [True] * (n + 1)
+    prime_table[0] = False
+    prime_table[1] = False
+
+    for i in range(2, len(prime_table)):
+        if prime_table[i]:
+            for j in range(2*i, len(prime_table), i):
+                prime_table[j] = False
+
+    return prime_table
+
+
 def is_prime(n):
     if n == 1:
         return False
