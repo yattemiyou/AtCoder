@@ -61,3 +61,20 @@ def get_factors(n):
 
     return sorted(answer)
 
+# （参考）
+# https://math.nakaken88.com/textbook/cp-binary-exponentiation-and-recursive-function/
+
+
+def modpow(base, exp, mod):
+    if exp == 0:
+        return 1
+
+    if exp == 1:
+        return base % mod
+
+    if exp % 2 == 1:
+        return base * modpow(base, exp-1, mod) % mod
+
+    tmp = modpow(base, exp // 2, mod)
+
+    return (tmp * tmp) % mod
